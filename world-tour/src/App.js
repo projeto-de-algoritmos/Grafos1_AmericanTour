@@ -14,6 +14,19 @@ function App() {
   return (
     <div className="App">
       <h1>World Tour</h1>
+      <div className="map-container">
+        <ComposableMap>
+          <ZoomableGroup zoom={1}>
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies.map((geo) => (
+                  <Geography key={geo.rsmKey} geography={geo} />
+                ))
+              }
+            </Geographies>
+          </ZoomableGroup>
+        </ComposableMap>
+      </div>
     </div>
   );
 }
