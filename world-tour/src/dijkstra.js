@@ -1,20 +1,20 @@
-const findLowestCostNode = (costs, processed) => {
-  const knownNodes = Object.keys(costs);
-
-  const lowestCostNode = knownNodes.reduce((lowest, node) => {
-    if (lowest === null && !processed.includes(node)) {
-      lowest = node;
-    }
-    if (costs[node] < costs[lowest] && !processed.includes(node)) {
-      lowest = node;
-    }
-    return lowest;
-  }, null);
-
-  return lowestCostNode;
-};
-
 const dijkstra = (graph, sourceCity, targetCity) => {
+  const findLowestCostNode = (costs, processed) => {
+    const knownNodes = Object.keys(costs);
+
+    const lowestCostNode = knownNodes.reduce((lowest, node) => {
+      if (lowest === null && !processed.includes(node)) {
+        lowest = node;
+      }
+      if (costs[node] < costs[lowest] && !processed.includes(node)) {
+        lowest = node;
+      }
+      return lowest;
+    }, null);
+
+    return lowestCostNode;
+  };
+
   // rastreia o custo mais baixo para chegar a cada nó
   const trackedCosts = graph[sourceCity];
   trackedCosts[targetCity] = Infinity;
