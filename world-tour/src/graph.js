@@ -1,0 +1,33 @@
+const graph = {
+  // 'La Paz': {'Brasília': 3.18, 'Santiago': 2.86},
+  // 'Miami': {'Nova York': 2.6, 'Toronto': 2.9, 'Bogotá': 3.4},
+  // 'Nova York': {'Miami': 2.6, 'Vancouver': 5.3, 'Londres': 7.4},
+  // 'Toronto': {'Vancouver': 4.6, 'Rio de Janeiro': 10.8},
+  // 'Vancouver': {'Miami': 6.08, 'San José': 5.5},
+  // 'Santiago': {'Buenos Aires': 1.9, 'La Paz': 2.86},
+  // 'Rio de Janeiro': {'Miami': 8.8, 'La Paz': 3.85, 'Buenos Aires': 2.93},
+  // 'Buenos Aires': {'Rio de Janeiro': 2.93, 'Brasília': 3.38},
+  // 'Colombo': {'Singapura': 3.88, 'Nairobi': 6.53, 'Bagdá': 6.31},
+  // 'San José': {'Bogotá': 1.16, 'Moscou': 12.2, 'Rio de Janeiro': 12.1},
+  // 'Bogotá': {'San José': 1, 'La Paz': 3.51},
+  // 'Roma': {'Bagdá': 4.18, 'Moscou': 3.5, 'Nairobi': 7.2, 'Cidade do Cabo': 11, 'Hong Kong': 12.05},
+  // 'Londres': {'Miami': 9.36, 'Roma': 2.26, 'Oslo': 1.9, 'Sydney': 21.6, 'Hong Kong': 12.43},
+  // 'Brasília': {'La Paz': 3.18, 'Rio de Janeiro': 1.65},
+  // 'Oslo': {'Londres': 1.9, 'Roma': 3.03},
+  // 'Tokyo': {'Xangai': 2.68, 'Zhangye': 4.8, 'Londres': 12.4},
+  // 'Singapura': {'Manila': 3.46, 'Sydney': 8.33, 'Bagdá': 9.35, 'Hong Kong': 3.7},
+  // 'Sydney': {'Londres': 21.6, 'Moscou': 18.53, 'Tokyo': 10.2},
+  // 'Hong Kong': {'Londres': 12.4, 'Tokyo': 4.1, 'Singapura': 3.7, 'Manila': 1.9, 'Zhangye': 3.3},
+  // 'Pequim': {'Zhangye': 2.2, 'Hong Kong': 2.93},
+  // 'Xangai': {'Pequim': 1.8, 'Colombo': 6.83, 'Manila': 2.8, 'Sydney': 10.3, 'Zhangye': 3.2},
+  // 'Manila': {'Singapura': 3.46, 'Sydney': 8.28, 'Hong Kong': 1.9},
+  // 'Cidade do Cabo': {'Colombo': 10.28, 'Angola': 2.05, 'Singapura': 12.5},
+  // 'Nairobi': {'Colombo': 6.53, 'Angola': 4.11, 'Roma': 7.2},
+  // 'Angola': {'Nairobi': 4.11, 'Moçambique': 2.73, 'Cidade do Cabo': 2.05},
+  // 'Moçambique': {'Angola': 2.73, 'Cidade do Cabo': 4.3},
+  // 'Moscou': {'Brasília': 17.9, 'Zhangye': 13.5, 'San José': 12.2},
+  // 'Zhangye': {'Moscou': 13.5, 'Rio de Janeiro': 25.1, 'Pequim': 2.2, 'Xangai': 3.2, 'Hong Kong': 3.7},
+  // 'Bagdá': {'Angola': 8.9, 'Moçambique': 7.2, 'Nairobi': 5.38, 'Colombo': 6.31}
+};
+
+module.exports = graph;
