@@ -1,4 +1,4 @@
-const dijkstra = (graph, sourceCity, targetCity) => {
+export const dijkstra = (graph, sourceCity, targetCity) => {
   const findLowestCostNode = (costs, processed) => {
     const knownNodes = Object.keys(costs);
 
