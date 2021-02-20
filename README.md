@@ -1,4 +1,4 @@
-# World Tour
+# American Tour
 
 **Número da Lista**: 4<br>
 **Conteúdo da Disciplina**: Grafos<br>
@@ -10,17 +10,16 @@
 | 17/0069800 | Ithalo Luiz de Azevedo Mendes |
 
 ## Sobre 
-A banda Aerosmith está planejando fazer uma turnê mundial com suas músicas clássicas. Para essa turnê, eles escolheram algumas cidades por onde querem passar. Porém, estão com dificuldades de decidir a melhor rota.
-
-O objetivo desse projeto é encontrar a melhor rota para a tour deles, a partir da escolha de uma cidade inicial onde a turnê vai se iniciar. Para isso, utilizamos o Algoritmo de Dijkstra que calcula o caminho de custo mínimo entre os vértices de um grafo. Escolhido um vértice como raiz da busca, este algoritmo calcula o custo mínimo deste vértice para todos os demais vértices do grafo. 
+O nosso projeto utiliza o Algoritmo de Dijkstra para encontrar a rota com o menor tempo de voo entre duas cidades. Nesse caso, as arestas dos grafos são o tempo de voo e os grafos são as cidades. 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![1](/assets/1.png)
+![2](/assets/2.png)
+![3](/assets/3.png)
 
 ## Instalação 
 **Linguagem**: Javascript<br>
 **Framework**: ReactJS<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
 ### Pré requisitos
 - Yarn
@@ -33,12 +32,8 @@ Para rodar o projeto são necessários apenas dois comandos:
   > yarn start
   > Para executar o projeto. 
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
+### Passo a passo
+Depois de executar o projeto, ele será aberto em: localhost:3000. Após acessar a aplicação, é só selecionar 2 cidades entre as 10 possíveis e clicar em "calcular rota". Depois disso, será mostrada a melhor rota entre as duas cidades.
 
 
