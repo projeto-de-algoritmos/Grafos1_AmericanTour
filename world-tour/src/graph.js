@@ -1,33 +1,131 @@
-const graph = {
-  // 'La Paz': {'Brasília': 3.18, 'Santiago': 2.86},
-  // 'Miami': {'Nova York': 2.6, 'Toronto': 2.9, 'Bogotá': 3.4},
-  // 'Nova York': {'Miami': 2.6, 'Vancouver': 5.3, 'Londres': 7.4},
-  // 'Toronto': {'Vancouver': 4.6, 'Rio de Janeiro': 10.8},
-  // 'Vancouver': {'Miami': 6.08, 'San José': 5.5},
-  // 'Santiago': {'Buenos Aires': 1.9, 'La Paz': 2.86},
-  // 'Rio de Janeiro': {'Miami': 8.8, 'La Paz': 3.85, 'Buenos Aires': 2.93},
-  // 'Buenos Aires': {'Rio de Janeiro': 2.93, 'Brasília': 3.38},
-  // 'Colombo': {'Singapura': 3.88, 'Nairobi': 6.53, 'Bagdá': 6.31},
-  // 'San José': {'Bogotá': 1.16, 'Moscou': 12.2, 'Rio de Janeiro': 12.1},
-  // 'Bogotá': {'San José': 1, 'La Paz': 3.51},
-  // 'Roma': {'Bagdá': 4.18, 'Moscou': 3.5, 'Nairobi': 7.2, 'Cidade do Cabo': 11, 'Hong Kong': 12.05},
-  // 'Londres': {'Miami': 9.36, 'Roma': 2.26, 'Oslo': 1.9, 'Sydney': 21.6, 'Hong Kong': 12.43},
-  // 'Brasília': {'La Paz': 3.18, 'Rio de Janeiro': 1.65},
-  // 'Oslo': {'Londres': 1.9, 'Roma': 3.03},
-  // 'Tokyo': {'Xangai': 2.68, 'Zhangye': 4.8, 'Londres': 12.4},
-  // 'Singapura': {'Manila': 3.46, 'Sydney': 8.33, 'Bagdá': 9.35, 'Hong Kong': 3.7},
-  // 'Sydney': {'Londres': 21.6, 'Moscou': 18.53, 'Tokyo': 10.2},
-  // 'Hong Kong': {'Londres': 12.4, 'Tokyo': 4.1, 'Singapura': 3.7, 'Manila': 1.9, 'Zhangye': 3.3},
-  // 'Pequim': {'Zhangye': 2.2, 'Hong Kong': 2.93},
-  // 'Xangai': {'Pequim': 1.8, 'Colombo': 6.83, 'Manila': 2.8, 'Sydney': 10.3, 'Zhangye': 3.2},
-  // 'Manila': {'Singapura': 3.46, 'Sydney': 8.28, 'Hong Kong': 1.9},
-  // 'Cidade do Cabo': {'Colombo': 10.28, 'Angola': 2.05, 'Singapura': 12.5},
-  // 'Nairobi': {'Colombo': 6.53, 'Angola': 4.11, 'Roma': 7.2},
-  // 'Angola': {'Nairobi': 4.11, 'Moçambique': 2.73, 'Cidade do Cabo': 2.05},
-  // 'Moçambique': {'Angola': 2.73, 'Cidade do Cabo': 4.3},
-  // 'Moscou': {'Brasília': 17.9, 'Zhangye': 13.5, 'San José': 12.2},
-  // 'Zhangye': {'Moscou': 13.5, 'Rio de Janeiro': 25.1, 'Pequim': 2.2, 'Xangai': 3.2, 'Hong Kong': 3.7},
-  // 'Bagdá': {'Angola': 8.9, 'Moçambique': 7.2, 'Nairobi': 5.38, 'Colombo': 6.31}
+export const miamiGraph = {
+  'Miami': { 'Nova Iorque': 2.68, 'Pierre': 3.91 },
+  'Nova Iorque': { 'Seattle': 5.3 },
+  'Carson City': { 'Orlando': 5.1 },
+  'Los Angeles': { 'Chicago': 4 },
+  'Pierre': { 'Denver': 1.26, 'Seattle': 2.63 },
+  'Orlando': {},
+  'Atlanta': { 'Los Angeles': 4.36, 'Chicago': 1.68 },
+  'Denver': { 'Seattle': 2.53 },
+  'Chicago': { 'Orlando': 2.48 },
+  'Seattle': { 'Atlanta': 4.85, 'Carson City': 1.66 }
 };
 
-module.exports = graph;
+export const novaIorqueGraph = {
+  'Nova Iorque': { 'Los Angeles': 5.41, 'Carson City': 5.28 },
+  'Los Angeles': { 'Carson City': 1.28 },
+  'Carson City': { 'Pierre': 2.61, 'Miami': 5.41 },
+  'Miami': { 'Orlando': 0.88, 'Seattle': 5.95 },
+  'Pierre': { 'Orlando': 3.53, 'Chicago': 1.81 },
+  'Orlando': { 'Denver': 3.58, 'Chicago': 2.48 },
+  'Atlanta': { 'Seattle': 4.85, 'Chicago': 1.68 },
+  'Denver': {},
+  'Chicago': { 'Denver': 2.3},
+  'Seattle': { 'Denver': 2.53}
+
+};
+
+export const carsonCityGraph = {
+  'Carson City': { 'Pierre': 2.61, 'Miami': 5.41 },
+  'Miami': { 'Nova Iorque': 2.68, 'Los Angeles': 5.18, 'Seattle': 5.95 },
+  'Nova Iorque': { 'Los Angeles': 5.41 },
+  'Los Angeles': { 'Orlando': 4.91 },
+  'Pierre': { 'Orlando': 3.53, 'Chicago': 1.81, 'Nova Iorque': 2.28 },
+  'Orlando': { 'Denver': 3.58, 'Chicago': 2.48 },
+  'Atlanta': { 'Seattle': 4.85, 'Chicago': 1.68, 'Nova Iorque': 2 },
+  'Denver': { 'Atlanta': 2.88, 'Miami': 3.91 },
+  'Chicago': { 'Denver': 2.3, 'Seattle': 3.95 },
+  'Seattle': { 'Denver': 2.53 }
+
+};
+
+export const losAngelesGaph = {
+  'Los Angeles': { 'Carson City': 1.28, 'Miami': 5.18 },
+  'Miami': { 'Nova Iorque': 2.68, 'Seattle': 5.95 },
+  'Nova Iorque': { 'Seattle': 5.3 },
+  'Carson City': {},
+  'Pierre': { 'Orlando': 3.53, 'Chicago': 1.81, 'Nova Iorque': 2.28 },
+  'Orlando': { 'Chicago': 2.48 },
+  'Atlanta': { 'Chicago': 1.68},
+  'Denver': { 'Atlanta': 2.88},
+  'Chicago': {},
+  'Seattle': { 'Denver': 2.53, 'Pierre': 2.63 }
+};
+
+export const pierreGraph = {
+  'Pierre': { 'Orlando': 3.53, 'Chicago': 1.81, 'Nova Iorque': 2.28 },
+  'Miami': { 'Nova Iorque': 2.68, 'Los Angeles': 5.18, 'Seattle': 5.95 },
+  'Nova Iorque': { 'Los Angeles': 5.41, 'Carson City': 5.28 },
+  'Carson City': { 'Miami': 5.41 },
+  'Los Angeles': { 'Carson City': 1.28 },
+  'Orlando': { 'Denver': 3.58, 'Chicago': 2.48 },
+  'Atlanta': { 'Seattle': 4.85, 'Chicago': 1.68, 'Nova Iorque': 2 },
+  'Denver': { 'Atlanta': 2.88, 'Miami': 3.91 },
+  'Chicago': { 'Denver': 2.3, 'Seattle': 3.95 },
+  'Seattle': { 'Denver': 2.53 }
+};
+
+export const orlandoGraph = {
+  'Orlando': { 'Denver': 3.58, 'Chicago': 2.48, 'Miami': 0.88 },
+  'Miami': { 'Nova Iorque': 2.68, 'Los Angeles': 5.18, 'Seattle': 5.95 },
+  'Nova Iorque': { 'Los Angeles': 5.41, 'Carson City': 5.28 },
+  'Carson City': { 'Pierre': 2.61, 'Miami': 5.41 },
+  'Los Angeles': { 'Carson City': 1.28 },
+  'Pierre': { 'Chicago': 1.81, 'Nova Iorque': 2.28 },
+  'Atlanta': { 'Seattle': 4.85, 'Chicago': 1.68, 'Nova Iorque': 2 },
+  'Denver': { 'Atlanta': 2.88, 'Miami': 3.91 },
+  'Chicago': { 'Denver': 2.3, 'Seattle': 3.95 },
+  'Seattle': { 'Denver': 2.53, 'Pierre': 2.63 }
+};
+
+export const atlantaGraph = {
+  'Atlanta': { 'Seattle': 4.85, 'Chicago': 1.68, 'Nova Iorque': 2 },
+  'Miami': { 'Nova Iorque': 2.6, 'Los Angeles': 4.1 },
+  'Nova Iorque': { 'Los Angeles': 5.41, 'Carson City': 5.28 },
+  'Carson City': { 'Pierre': 2.61, 'Miami': 5.41 },
+  'Los Angeles': { 'Carson City': 1.28 },
+  'Pierre': { 'Orlando': 3.53, 'Chicago': 1.81, 'Nova Iorque': 2.28 },
+  'Orlando': { 'Denver': 3.58, 'Chicago': 2.48 },
+  'Denver': { 'Miami': 3.91 },
+  'Chicago': { 'Denver': 2.3, 'Seattle': 3.95 },
+  'Seattle': { 'Denver': 2.53, 'Pierre': 2.63 }
+};
+
+export const denverGraph = {
+  'Denver': { 'Atlanta': 2.88, 'Miami': 3.91 },
+  'Miami': { 'Nova Iorque': 2.6, 'Los Angeles': 4.1, 'Seattle': 5.95 },
+  'Nova Iorque': { 'Los Angeles': 5.41, 'Carson City': 5.28 },
+  'Carson City': { 'Pierre': 2.61, 'Miami': 5.41 },
+  'Los Angeles': { 'Carson City': 1.28 },
+  'Pierre': { 'Orlando': 3.53, 'Chicago': 1.81, 'Nova Iorque': 2.28 },
+  'Orlando': { 'Chicago': 2.48 },
+  'Atlanta': { 'Seattle': 4.85, 'Chicago': 1.68, 'Nova Iorque': 2 },
+  'Chicago': { 'Seattle': 3.95 },
+  'Seattle': { 'Pierre': 2.63 }
+};
+
+export const chicagoGraph = {
+  'Chicago': { 'Nova Iorque': 1.91, 'Los Angeles': 4.15, 'Orlando': 2.48 },
+  'Miami': { 'Denver': 3.91 },
+  'Nova Iorque': { 'Miami': 2.6, 'Carson City': 5.28 },
+  'Carson City': { 'Seattle': 1.66 },
+  'Los Angeles': {},
+  'Pierre': {},
+  'Orlando': { 'Pierre': 3.53 },
+  'Atlanta': { 'Los Angeles': 4.38 },
+  'Denver': {},
+  'Seattle': {}
+};
+
+export const seattleGraph = {
+  'Seattle': { 'Los Angeles': 2.4, 'Pierre': 2.63 },
+  'Miami': { 'Orlando': 0.88 },
+  'Nova Iorque': { 'Orlando': 2.38, 'Chicago': 1.91 },
+  'Carson City': {},
+  'Los Angeles': { 'Miami': 4.91, 'Denver': 2.35 },
+  'Pierre': { 'Miami': 3.91, 'Nova Iorque': 3.21 },
+  'Orlando': { 'Carson City': 2.56 },
+  'Atlanta': { 'Carson City': 1.81 },
+  'Denver': { 'Nova Iorque': 3.71 },
+  'Chicago': { 'Atlanta': 1.68 },
+};
