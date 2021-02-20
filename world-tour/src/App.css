@@ -1,11 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'Nunito';
+}
+
+#home-page-title {
+  margin: 20px 0;
+}
+
+#source-city-title, #target-city-title {
+  margin: 10px 0;
+}
+
 .App {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #DDFFF7;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+#source-city-container, #target-city-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-cities-box {
+  width: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.select-cities-box select {
+  background: url('./assets/expand_more-24px.svg') no-repeat;
+  background-color: #81ACFF;
+  background-position: 205px center;
+  width: 250px;
+  height: 48px;
+  font-family: 'Nunito';
+  font-size: 18px;
+  padding: 10px;
+  color: #39393A;
+}
+
+#select-cities-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#select-group {
+  display: flex;
+  flex-direction: row;
+}
+
+#source-city-container,
+#target-city-container {
+  margin: 0 20px;
+}
+
+#source-city-title,
+#target-city-title {
+  font-size: 20px;
+}
+
+#button-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+#calculate-button {
+  width: 250px;
+  height: 40px;
+  margin: 10px 0;
+  border: 0;
+  cursor: pointer;
+  background: #39393A;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+}
+
+#calculate-button:last-child {
+  background: #fa7963;
+}
+
+#calculate-button:last-child:hover {
+  background: #ff684e;
+}
+
+#calculate-button:hover {
+  background: #202020;
+}
+
+#calculate-button:disabled {
+background: #707070;
+cursor: not-allowed;
+}
+
+#routes-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#best-route-title {
+  align-self: flex-start;
+  margin-top: 30px;
+}
+
+#best-route-names {
+  display: flex;
+  flex-direction: row;
+}
+
+#route-city {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #34cb79;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+#route-city-title {
+  color: #FFF;
 }
 
 .map-container {
-  width: 50%; 
+  width: 40%;
 }
