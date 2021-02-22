@@ -15,24 +15,35 @@ export const dijkstra = (graph, sourceCity, targetCity) => {
     return lowestCostNode;
   };
 
-  // rastreia o custo mais baixo para chegar a cada nó
+  // Grafo utilizado
+  // console.log('Graph: ');
+  // console.log(graph);
+
+  // Rastreia o custo mais baixo para chegar a cada nó
   const trackedCosts = graph[sourceCity];
   trackedCosts[targetCity] = Infinity;
+  // console.log('Custos Iniciais: ');
+  // console.log(trackedCosts);
 
-  // rastrear caminhos
+  // Rastrear caminhos
   const trackedNeighbors = {};
   trackedNeighbors[targetCity] = null;
   for (var neighbor in graph[sourceCity]) {
     trackedNeighbors[neighbor] = sourceCity;
   }
+  // console.log('Vizinhos iniciais: ');
+  // console.log(trackedNeighbors);
 
-  // rastreia nós que já foram processados
+  // Rastreia nós que já foram processados
   const processedNodes = [];
 
   // Define o nó inicial. Escolhe o nó de menor custo
   var node = findLowestCostNode(trackedCosts, processedNodes);
+  // console.log('Nó inicial: ', node);
 
+  // console.log('Início do laço while: ');
   while (node) {
+    // console.log(`***** Nó atual ${node} *****`);
     var costToReachNode = trackedCosts[node];
     var childrenOfNode = graph[node];
 
@@ -44,6 +55,10 @@ export const dijkstra = (graph, sourceCity, targetCity) => {
         trackedCosts[child] = costToChild;
         trackedNeighbors[child] = node;
       }
+
+      // console.log('Custos ratreados', trackedCosts);
+      // console.log('Vizinhos rastreados', trackedNeighbors);
+      // console.log('==========================');
     }
 
     processedNodes.push(node);
