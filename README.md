@@ -10,7 +10,8 @@
 | 17/0069800 | Ithalo Luiz de Azevedo Mendes |
 
 ## Apresentação 
-https://www.youtube.com/embed/_3DqnfgaaqA
+
+O vídeo da apresentação se encontra na pasta /media.
 
 ## Sobre 
 O nosso projeto utiliza o Algoritmo de Dijkstra para encontrar a rota com o menor tempo de voo entre duas cidades. Nesse caso, as arestas dos grafos são as rotas entre as cidades com seus respectivos tempo de voo, e os nós são as cidades.
